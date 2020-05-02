@@ -1,0 +1,53 @@
+body {
+    background-color: #a8a6bd;
+    font: normal 15pt Arial;
+}
+
+header {
+    color: #131126;
+    text-align: center;
+}
+
+section {
+    background-color: #2013d6;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px #3f3a3a;
+    color: #ffffff;
+}
+
+footer {
+    color: #2013d6;
+    text-align: center;
+    font-style: italic;
+}
+
+#imagem {
+    width: 80%;
+    border-radius: 60%;
+}
+
+div {
+    text-align: center;
+    padding: 8px;
+}
+
+#botao {
+    padding: 20px;
+    font-size: 15pt;
+    background-color: #595678;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #a3e3a5;
+}
+
+#txtInicio,
+#txtFinal {
+    text-align: center;
+    height: 20px;
+    width: 60px;
+    border-radius: 8px;
+}

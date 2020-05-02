@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #9bbcf2;
+            color: #ffffff;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Abrir o Inspecionar</h1>
+    <h3>Console</h3>
+    <script>
+        var usuario = {
+            nome: 'Saori',
+            idade: 34,
+            youtube: 'tutopom',
+            'ultimo-nome': 'Kabuchi',
+            competencia: {
+                linguagens: ['JavaScript', 'Python', 'Go', 'Scala', 'PHP'],
+                habilidades: ['danca', 'não-canto', 'jogo', 'dormir', 'comer doce']
+            }
+        };
+        console.log(usuario);
+        console.log(usuario.idade);
+
+        usuario.cidade = ['São Paulo', 'Rio de Janeiro', 'Florianopolis']
+
+        console.log(usuario);
+
+        usuario.cor = ['cinza', 'verde', 'preto', 'vermelho']
+
+        console.log(usuario)
+
+        delete usuario.cor
+
+        console.log(usuario)
+
+        let usuario2 = {
+            digaOi: function(nome) {
+                return `Olá ${nome}`;
+            }
+        };
+
+        console.log(usuario2.digaOi('Rafaela'));
+
+        let cor = 'verde';
+        idade = 30
+
+        let usuario3 = {
+            nome: 'Marcos',
+            cor,
+            idade
+        };
+
+        console.log(usuario3)
+
+        let usuario4 = {
+            nome: 'Melanie',
+            sobrenome: 'Chrisholm',
+            Spice: 'Sporty',
+        };
+        console.log(usuario4)
+
+        let extraInfo = {
+            pais: 'Inglaterra',
+            local: 'Liverpool'
+        };
+        console.log(extraInfo)
+
+        let novoUsuario = Object.assign({}, usuario4, extraInfo);
+        console.log(novoUsuario)
+
+        let usuario5 = {
+            nome: 'Geri',
+            sobrenome: 'Halliwel'
+        }
+        console.log(usuario5)
+
+        let extrasInfo = {
+            apelido: 'Ginger Spice'
+        }
+        console.log(extraInfo)
+
+        Object.assign(usuario5, extrasInfo)
+        console.log(usuario5)
+
+        let spice = {
+            nome: 'Victoria',
+            sobrenome: 'Beckham'
+        }
+
+        let info = {
+            spice: 'Posh',
+            casada: 'David',
+            ... {
+                filhos: '3 meninos e 1 menina'
+            }
+        }
+
+        usuario6 = {
+            ...spice,
+            ...info
+        }
+
+        console.log(usuario6) // =  Object.assign(usuario5, extrasInfo) //console.log(usuario5)
+
+        let nomeVariavel = 'estado'
+
+        let variavelUsuario = {
+            nome: 'Ginger',
+            [nomeVariavel]: 'New York'
+        }
+        console.log(variavelUsuario)
+
+        //getters e setters
+
+        let usuarios = [{
+            nome: 'neide',
+            idade: 60
+        }, {
+            nome: 'maria luiza',
+            idade: 25
+        }, {
+            nome: 'george henrique',
+            idade: 38
+        }];
+
+        console.log(usuarios)
+        console.log(usuarios[2])
+        console.log(usuarios[0].nome)
+
+        let amigos = {
+                posicao: 0,
+                get atual() {
+                    return usuarios[this.posicao]
+                },
+                set atual(posicao) {
+                    this.posicao = posicao;
+                },
+                proximo() {
+                    ++this.posicao;
+                },
+                anterior() {
+                    --this.posicao;
+                }
+            }
+            //get = retorna valor
+            //set = definir o valor
+        console.log(amigos.atual);
+        amigos.proximo();
+
+        console.log(amigos.atual);
+
+        amigos.proximo();
+        console.log(amigos.atual);
+
+        amigos.anterior();
+        console.log(amigos.atual);
+
+        amigos.atual = 0;
+        console.log(amigos.atual);
+
+        amigos.atual = 2;
+        console.log(amigos.atual);
+    </script>
+</body>
+
+</html>

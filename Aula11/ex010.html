@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - Exercicio 10 - Detran</title>
+</head>
+
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do Carro: <input type="number" name="txtVel" id="txtVel"> km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="resultado"></div>
+
+    <script>
+        function calcular() {
+            var txtVel = document.querySelector(`input#txtVel`)
+            var resultado = document.getElementById(`resultado`)
+            var velocidade = Number(txtVel.value)
+            resultado.innerHTML = `<p>Sua velocidade atual é de <strong>${velocidade} km/hr</strong></p>`
+            if (velocidade > 50) {
+                resultado.innerHTML = `<p>Você está acima da velocidade, <strong>MULTADO</strong></p>`
+            }
+            resultado.innerHTML += `<p>Dirija sempre com com atenção</p>`
+        }
+    </script>
+
+</html>

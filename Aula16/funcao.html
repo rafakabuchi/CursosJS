@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Fatorial</h1>
+
+    </header>
+    <section>
+        <div id="dados">
+            <p>Digite um número: <input type="number" name="inicio" id="txtNumero"> </p>
+
+            <input type="button" value="Fatorar" onclick="calcular()" id="botao">
+        </div>
+        <div id="resultado">
+            Fazendo os calculos...
+        </div>
+    </section>
+    <footer>
+        <p>&copy;RafaelaSaori</p>
+    </footer>
+
+    <script>
+        function calcular() {
+            let n = Number(document.getElementById('txtNumero').value)
+            let res = document.getElementById('resultado')
+            fatorial(n)
+
+            function fatorial(n) {
+                if (n === 1) {
+                    return 1
+                } else {
+                    return n * fatorial(n - 1)
+                }
+            }
+            let total = fatorial(n)
+            res.innerHTML = `O resultado de ${n} é ${total}`
+        }
+    </script>
+</body>
+
+</html>

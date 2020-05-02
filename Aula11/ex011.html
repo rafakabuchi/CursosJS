@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - exercicio 11 - Nacionaliade</title>
+    <style>
+        body {
+            background-color: #5fb550;
+            font: normal 18pt Arial;
+            color: #e3ed51;
+        }
+        
+        #botao {
+            background-color: blue;
+            color: antiquewhite;
+            margin-left: 20px;
+            padding: 10px;
+            width: 120px;
+            height: 30px;
+            border-radius: 5px;
+            font-size: 12pt;
+            text-align: center;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 6em;
+        }
+        
+        h1 {
+            background-color: #2db8bd;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 50px;
+        }
+        
+        #nasc {
+            margin-top: 20px;
+            height: 30px;
+            width: 150px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #pais,
+        #resultado {
+            text-align: center;
+        }
+        
+        input {
+            margin-left: auto;
+            margin-right: auto;
+            width: 6em
+        }
+    </style>
+</head>
+;
+
+<body>
+    <div class="container">
+        <h1>Você é br huahua?</h1>
+    </div>
+    <div class="container" id="pais">
+        Qual é o país que você nasceu? </div><input type="text" name="nascimento" id="nasc">
+    </div>
+    <div class="container">
+        <input type="button" value="verificar" onclick="verificar()" id="botao">
+    </div>
+    <div id="resultado"></div>
+
+    <script>
+        function verificar() {
+            var txtNac = document.getElementById('nasc')
+            var resultado = document.getElementById('resultado')
+            var res = (txtNac.value.toUpperCase())
+            resultado.innerHTML = `<p>o seu país é <strong>${res}</strong></p>`
+
+            if (res == 'BRASIL') {
+                resultado.innerHTML = `<p>Você manja de memes e Gretchen</p>`
+            } else {
+                resultado.innerHTML = `<p>Você é rica! Você é gringo</p>`
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>

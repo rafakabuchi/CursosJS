@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Contador Ping Pong</h1>
+    </header>
+    <section>
+        <div>
+            <p>Ping é divisível por 3</p>
+            <p>Pong é divisível por 5</p>
+            <p>Digite um número inicial: <input type="number" name="inicio" id="txtInicio"></p>
+            <p>Digite um número final: <input type="number" name="final" id="txtFinal"></p>
+            <input type="button" value="Ma-oê" onclick="calcular()" id="botao">
+        </div>
+
+        <div id="resultado">
+            <span>Ping-Pong...</span>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;RafaelaSaori</p>
+    </footer>
+    <script>
+        for (let i = 0; i < 100; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log(i, 'PINTG PONG')
+            } else if (i % 3 === 0) {
+                console.log(i, 'PING')
+            } else if (i % 5 === 0) {
+                console.log(i, 'PONG')
+            }
+        }
+    </script>
+
+</body>
+
+</html>
